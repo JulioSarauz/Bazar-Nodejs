@@ -28,4 +28,4 @@ let laminaSchema = new Schema({
 
 laminaSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model('Lamina', laminaSchema);
+module.exports = mongoose.model('lamina', laminaSchema);
