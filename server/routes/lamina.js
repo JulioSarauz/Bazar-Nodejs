@@ -14,7 +14,7 @@ app.get('/Lamina', function(req, res) {
     let limite = req.query.limite || 0;
     limite = Number(limite);
 
-    Lamina.find({}, 'numero nombre numero_seccion seccion')
+    Lamina.find({}, 'numero nombre n_seccion seccion')
         .limit(limite)
         .skip(desde)
         .exec((err, lamina) => {
@@ -42,7 +42,7 @@ app.post('/Lamina', function(req, res) {
     let lamina = new Lamina({
         numero: body.numero,
         nombre: body.nombre,
-        numero_seccion: body.numero_seccion,
+        n_seccion: body.n_seccion,
         seccion: body.seccion
 
     });
@@ -65,7 +65,7 @@ app.post('/Lamina', function(req, res) {
 
 app.put('/Lamina/:id', function(req, res) {
     let id = req.params.id
-    let body = _.pick(req.body, ['numero', 'nombre', 'numero_seccion', 'seccion']);
+    let body = _.pick(req.body, ['numero', 'nombre', 'n_seccion', 'seccion']);
 
     Lamina.findByIdAndUpdate(id, body, { new: true, runValidators: true }, (err, laminaBD) => {
         if (err) {
