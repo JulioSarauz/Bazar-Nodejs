@@ -109,6 +109,4 @@ app.delete('/Lamina', function(req, res) {
     });
 });
 
-
-
 module.exports = app;

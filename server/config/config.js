@@ -14,7 +14,7 @@ process.env.PORT = process.env.PORT || 3000;
 let urlDB;
 
 if (process.env.NODE_ENV === 'dev') {
-    urlDB = 'mongodb://localhost:27017/cafe';
+    urlDB = 'mongodb://localhost:27017/bazar';
 } else {
     urlDB = 'mongodb+srv://Julio:julyok64@cluster0-tmte0.gcp.mongodb.net/bazar'
 }
