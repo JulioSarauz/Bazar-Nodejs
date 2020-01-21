@@ -16,7 +16,6 @@ let laminaSchema = new Schema({
     },
     numero_seccion: {
         type: Number,
-        unique: true,
         required: [true, 'El numero de seccion es necesario']
     },
 
