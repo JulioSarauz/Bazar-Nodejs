@@ -64,7 +64,7 @@ app.post('/Lamina', function(req, res) {
 
 
 app.put('/Lamina', function(req, res) {
-    let id = req.query.id
+    let id = req.params.id
     let body = _.pick(req.body, ['numero', 'nombre', 'numero_seccion', 'seccion']);
 
     Lamina.findByIdAndUpdate(id, body, { new: true, runValidators: true }, (err, laminaBD) => {
