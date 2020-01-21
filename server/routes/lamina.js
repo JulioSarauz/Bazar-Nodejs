@@ -25,7 +25,7 @@ app.get('/Lamina', function(req, res) {
                 });
             }
 
-            lamina.count({}, (err, conteo) => {
+            Lamina.count({}, (err, conteo) => {
                 res.json({
                     ok: true,
                     cuantos: conteo,
