@@ -63,7 +63,7 @@ app.post('/Lamina', function(req, res) {
 });
 
 
-app.put('/Lamina', function(req, res) {
+app.put('/Lamina/:id', function(req, res) {
     let id = req.params.id
     let body = _.pick(req.body, ['numero', 'nombre', 'numero_seccion', 'seccion']);
 
