@@ -14,7 +14,7 @@ let laminaSchema = new Schema({
         type: String,
         required: [true, 'El nombre de la lamina es necesario']
     },
-    n_seccion: {
+    numero_seccion: {
         type: Number,
         required: [true, 'El numero de seccion es necesario']
     },
@@ -27,4 +27,4 @@ let laminaSchema = new Schema({
 
 laminaSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model('lamina', laminaSchema);
+module.exports = mongoose.model('Lamina', laminaSchema);
