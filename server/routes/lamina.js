@@ -43,7 +43,8 @@ app.post('/Lamina', function(req, res) {
         numero: body.numero,
         nombre: body.nombre,
         numero_seccion: body.numero_seccion,
-        seccion: body.seccion
+        seccion: body.seccion,
+        stock: body.stock
 
     });
 
@@ -65,7 +66,7 @@ app.post('/Lamina', function(req, res) {
 
 app.put('/Lamina/:id', function(req, res) {
     let id = req.params.id
-    let body = _.pick(req.body, ['numero', 'nombre', 'numero_seccion', 'seccion']);
+    let body = _.pick(req.body, ['numero', 'nombre', 'numero_seccion', 'seccion', 'stock']);
 
     Lamina.findByIdAndUpdate(id, body, { new: true, runValidators: true }, (err, laminaBD) => {
         if (err) {

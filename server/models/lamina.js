@@ -23,6 +23,10 @@ let laminaSchema = new Schema({
     seccion: {
         type: String,
         require: [true, 'El nombre de la seccion es necesario']
+    },
+    stock: {
+        type: Number,
+        require: [true, 'El stock es necesario']
     }
 });
 
