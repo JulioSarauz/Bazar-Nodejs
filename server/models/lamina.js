@@ -6,7 +6,7 @@ let Schema = mongoose.Schema;
 let laminaSchema = new Schema({
 
     numero: {
-        type: Number,
+        type: String,
         unique: true,
         required: [true, 'El numero de la lamina es necesario']
     },
